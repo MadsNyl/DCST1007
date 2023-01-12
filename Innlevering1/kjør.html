@@ -7,8 +7,8 @@
     <title>Innlevering 1</title>
     <script src="index.js" type="module" defer></script>
 </head>
-<body style="box-sizing: border-box; margin: 0; padding: 0;">
-    <div style="width: 100vw; height: 100vh; display: flex; justify-content: center; align-items: center;">
+<body style="box-sizing: border-box; margin: 0; padding: 60px 0;">
+    <div style="max-width: 100vw; display: flex; justify-content: space-around;">
         <div style="display: flex;">
             <div style="padding-right: 60px;">
                 <h3>
@@ -54,6 +54,74 @@
                     Hastighet: <b id="pace-fer">0</b> km/t
                 </p>
             </div>
+        </div>
+
+        <div>
+            <h3>Bil.js</h3>
+            <pre style="background-color: rgb(244, 241, 241); border-radius: 12px; padding: 0 20px;">
+<code>
+export default class Bil {
+    constructor(regnr, merke, årsmodell) {
+        this.regnr = regnr;
+        this.merke = merke;
+        this.årsmodell = årsmodell;
+        this.hastighet = 0;
+    }
+
+    hentHastighet() { return this.hastighet; }
+
+    gass() { this.hastighet += 10; }
+
+    brems() { this.hastighet -= 10; }
+}
+</code>
+            </pre>
+
+            <h3>index.js</h3>
+            <pre style="background-color: rgb(244, 241, 241); border-radius: 12px; padding: 0 20px;">
+<code>
+import Bil from "./bil.js";
+
+const paceRoof = 200;
+const paceFloor = 0;
+
+// liste over alle bilene
+const cars = [
+    { 
+        car: new Bil("BS12092", "Mercedes", 2005),
+        drive: document.getElementById("drive-mer"),
+        break: document.getElementById("break-mer"),
+        pace: document.getElementById("pace-mer")
+    },
+    { 
+        car: new Bil("XS12042", "Volvo", 2018),
+        drive: document.getElementById("drive-vol"),
+        break: document.getElementById("break-vol"),
+        pace: document.getElementById("pace-vol")
+    },
+    { 
+        car: new Bil("EL25032", "Ferrari", 2021),
+        drive: document.getElementById("drive-fer"),
+        break: document.getElementById("break-fer"),
+        pace: document.getElementById("pace-fer")
+    }
+]
+
+for (const car of cars) {
+    // knapp for å gasse opp
+    car.drive.addEventListener("click", () => {
+        car.car.hentHastighet() < paceRoof && car.car.gass();
+        car.pace.innerText = car.car.hentHastighet();
+    });
+
+    // knapp for å bremse
+    car.break.addEventListener("click", () => {
+        car.car.hentHastighet() > paceFloor && car.car.brems();
+        car.pace.innerText = car.car.hentHastighet();
+    });
+}
+</code>
+            </pre>
         </div>
     </div>
 </body>

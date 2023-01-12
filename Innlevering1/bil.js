@@ -11,6 +11,4 @@ export default class Bil {
     gass() { this.hastighet += 10; }
 
     brems() { this.hastighet -= 10; }
-
-
 }
