@@ -1,9 +1,13 @@
-export default class Bil {
-    constructor(regnr, merke, årsmodell) {
+class Bil {
+    regnr: string;
+    merke: string;
+    årsmodell: number;
+    hastighet: number = 0;
+
+    constructor(regnr: string, merke: string, årsmodell: number) {
         this.regnr = regnr;
         this.merke = merke;
         this.årsmodell = årsmodell;
-        this.hastighet = 0;
     }
 
     hentHastighet() { return this.hastighet; }
@@ -11,6 +15,4 @@ export default class Bil {
     gass() { this.hastighet += 10; }
 
     brems() { this.hastighet -= 10; }
-
-
 }
