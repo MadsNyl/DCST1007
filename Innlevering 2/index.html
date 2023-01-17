@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Innlevering 2</title>
+    <script src="index.js" defer type="module"></script>
+</head>
+<body style="margin: 0; padding: 0; box-sizing: border-box;">
+    <div style="width: 70%; margin: auto; margin-top: 40px;">
+        <div>
+            <div 
+                id="create-user-wrapper"
+                style="width: 100%;"
+            >
+                <div style="display: flex; justify-content: left; width: 100%;">
+                    <button 
+                        id="create-user"
+                        style="padding: 12px 20px; border-radius: 12px; background-color: green; color: white; box-shadow: 0 4px 8px rgba(0,0,0,0.15); font-size: 16px; border: none; cursor: pointer;"
+                    >
+                        Opprett ny konto
+                    </button>
+                </div>
+
+                <div
+                    id="create-user-box"
+                    style="display: none; padding: 20px 0;"
+                >
+                    <input 
+                        id="customerNumber"
+                        type="number"
+                        placeholder="Kundenummer"
+                    >
+                    <input
+                        id="name" 
+                        type="text"
+                        placeholder="Fullt navn"
+                    >
+                    <select 
+                        id="user"
+                        value="adult"
+                    >
+                        <option 
+                            value="adult"
+                        >
+                            Voksen
+                        </option>
+                        <option 
+                            value="child"
+                        >
+                            Barn
+                        </option>
+                    </select>
+                    <input 
+                        id="saldo"
+                        type="number"
+                    >
+                    <button
+                        id="createUser"
+                    >
+                        Opprett
+                    </button>
+                </div>
+
+                <br>
+                <br>
+                
+                <div 
+                    id="user-info"
+                >
+                </div>
+
+                <br>
+                <br>
+
+                <div
+                    id="timeLine"
+                    style="display: none;"
+                >
+                    <div
+                        style="padding: 6px 0;"
+                    >
+                        Klokka 10:30 - <span id="first-takeout"></span>
+                    </div> 
+
+                    <div
+                        style="padding: 6px 0;"
+                    >
+                        Klokka 11:00 - <span id="first-input"></span>
+                    </div> 
+
+                    <div
+                        style="padding: 6px 0;"   
+                    >
+                        Klokka 11:00 - <span id="second-input"></span>
+                    </div>
+                    
+                    <div
+                        style="padding: 6px 0;"   
+                    >
+                        Klokka 12:15 - <span id="first-transfer"></span>
+                    </div>
+
+                    <div
+                        style="padding: 6px 0;"    
+                    >
+                        Klokka 17:30 - <span id="second-takeout"></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
