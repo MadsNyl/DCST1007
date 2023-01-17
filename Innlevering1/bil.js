@@ -1,14 +1,14 @@
 export default class Bil {
     constructor(regnr, merke, årsmodell) {
-        this.regnr = regnr;
-        this.merke = merke;
-        this.årsmodell = årsmodell;
-        this.hastighet = 0;
+        this._regnr = regnr;
+        this._merke = merke;
+        this._årsmodell = årsmodell;
+        this._hastighet = 0;
     }
 
-    hentHastighet() { return this.hastighet; }
+    get hastighet() { return this._hastighet; }
 
-    gass() { this.hastighet += 10; }
+    gass() { this._hastighet += 10; }
 
-    brems() { this.hastighet -= 10; }
+    brems() { this._hastighet -= 10; }
 }

@@ -28,13 +28,13 @@ const cars = [
 for (const car of cars) {
     // knapp for å gasse opp
     car.drive.addEventListener("click", () => {
-        car.car.hentHastighet() < paceRoof && car.car.gass();
-        car.pace.innerText = car.car.hentHastighet();
+        car.car.hastighet < paceRoof && car.car.gass();
+        car.pace.innerText = car.car.hastighet;
     });
 
     // knapp for å bremse
     car.break.addEventListener("click", () => {
-        car.car.hentHastighet() > paceFloor && car.car.brems();
-        car.pace.innerText = car.car.hentHastighet();
+        car.car.hastighet > paceFloor && car.car.brems();
+        car.pace.innerText = car.car.hastighet;
     });
 }
