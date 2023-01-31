@@ -1,14 +1,23 @@
+import colors from "./colors.js";
+
 export default class Figure {
     constructor(x, y, r) {
         this._x = x;
         this._y = y;
         this._r = r;
-        this._color = `rgb(${Math.floor(Math.random() * 255)}, ${Math.floor(Math.random() * 255)}, ${Math.floor(Math.random() * 255)})`;
+        // this._color = `rgb(${Math.floor(Math.random() * 255)}, ${Math.floor(Math.random() * 255)}, ${Math.floor(Math.random() * 255)})`;
+        this._color = colors[Math.floor(Math.random() * colors.length)]
         this._vel = [
             this.getRandom(-1, 1),
             this.getRandom(-1, 1)
         ]
     }
+
+    get x() {return this._x}
+
+    get y() {return this._y}
+
+    get r() {return this._r}
 
     run(ctx, width, height) {
         this.draw(ctx);

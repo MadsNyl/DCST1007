@@ -1,4 +1,5 @@
 import Bubble from "./bubble.js";
+import Heart from "./heart.js";
 import Rectangle from "./rectangle.js";
 
 const canvas = document.getElementById("canvas");
@@ -13,7 +14,7 @@ let figureType = true;
 
 const appendEachSecond = () => {
     if (figureType) {
-        figures.push(new Bubble(
+        figures.push(new Heart(
             getRandom(0 + (2 * MAX_RADIUS), MAX_WIDTH),
             getRandom(0 + (2 * MAX_RADIUS), MAX_HEIGHT),
             getRandom(10, MAX_RADIUS)
@@ -33,7 +34,7 @@ const addWithClick = (e) => {
     const posy = e.clientY - rect.top;
 
     if (figureType) {
-        figures.push(new Bubble(
+        figures.push(new Heart(
             posx,
             posy,
             getRandom(10, MAX_RADIUS)
