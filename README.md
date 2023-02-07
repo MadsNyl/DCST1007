@@ -16,4 +16,7 @@ Innleveringer:
   <li>
     <a  href="https://folk.ntnu.no/mknylund/DCST1007/innlevering4/">Innlevering 4</a>
   </li>
+  <li>
+    <a href="https://folk.ntnu.no/mknylund/DCST1007/Innlevering5/">Innlevering 5</a>
+  </li>
 </ul>
