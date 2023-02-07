@@ -1,0 +1,59 @@
+{
+    "mountains": [
+        {
+            "name": "Folarskardnuten",
+            "height": 1933,
+            "county": "Viken"
+        },
+        {
+            "name": "Galdhøpiggen",
+            "height": 2469,
+            "county": "Innlandet"
+        },
+        {
+            "name": "Gaustatoppen",
+            "height": 1883,
+            "county": "Vestfold og Telemark"
+        },
+        {
+            "name": "Jiehkkevárri",
+            "height": 1834,
+            "county": "Troms og Finnmark"
+        },
+        {
+            "name": "Kjerkeberget",
+            "height": 630,
+            "county": "Oslo"
+        },
+        {
+            "name": "Oksskolten",
+            "height": 1915,
+            "county": "Nordland"
+        },
+        {
+            "name": "Pyttegga",
+            "height": 1999,
+            "county": "Møre og Romsdal"
+        },
+        {
+            "name": "Store Skagastølstinden",
+            "height": 2405,
+            "county": "Vestland"
+        },
+        {
+            "name": "Storskrymten",
+            "height": 1985,
+            "county": "Trøndelag"
+        },
+        {
+            "name": "Sæbyggjenuten",
+            "height": 1507,
+            "county": "Agder"
+        },
+        {
+            "name": "Vassdalseggi",
+            "height": 1658,
+            "county": "Rogaland"
+        }
+    ]
+}
