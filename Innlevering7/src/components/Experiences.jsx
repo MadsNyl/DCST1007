@@ -1,6 +1,6 @@
 import { Component } from "react-simplified";
 import React from "react";
-import Info from "./Info";
+import Info from "./Studies";
 
 export default class Experiences extends Component {
 

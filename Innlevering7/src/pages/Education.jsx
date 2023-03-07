@@ -1,6 +1,6 @@
 import React from "react";
 import { Component } from "react-simplified";
-import Educations from "../components/Educations";
+import Educations from "../components/Students";
 
 export default class Education extends Component {
 
