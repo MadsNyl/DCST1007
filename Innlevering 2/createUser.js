@@ -28,7 +28,7 @@ const createUser = (e) => {
 
     let account;
 
-    if (user.value === "adult") account = new Konto(accountNumber.value, name.value, saldo.value);
+    if (user.value === "adult") account = new Konto(accountNumber.value, name.value, parseInt(saldo.value));
     else account = new BarneKonto(accountNumber.value, name.value);
 
     appendUserInfo(account);
