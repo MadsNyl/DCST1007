@@ -1,0 +1,7 @@
+CREATE TABLE student(
+    id int AUTO_INCREMENT,
+    name varchar(255),
+    study varchar(255),
+    PRIMARY KEY (id),
+    FOREGIN KEY (study) REFERENCES study (tag)
+)

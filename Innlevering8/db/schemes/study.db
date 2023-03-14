@@ -1,0 +1,5 @@
+CREATE TABLE study (
+    tag varchar(255),
+    name varchar(255),
+    PRIMARY KEY (tag)
+)
