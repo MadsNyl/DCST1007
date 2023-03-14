@@ -5,8 +5,9 @@ import { Component } from "react-simplified";
 export default class Menu extends Component {
 
   routes = [
-    { path: "/students", name: "Studenter", isActive: true },
-    { path: "/studies", name: "Studieprogram", isActive: false },
+    { path: "/admin", name: "Admin", isActive: true },
+    { path: "/students", name: "Studenter", isActive: false },
+    { path: "/studies", name: "Studieprogram", isActive: false }
   ];
 
   checkActive = (item) => {

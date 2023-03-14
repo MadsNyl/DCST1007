@@ -3,15 +3,17 @@ import React from "react";
 import { pool } from "../../db/main";
 import Study from "../../db/model/study.model";
 import StudyProgramService from "../services/StudyProgramService";
+import { NavLink } from "react-router-dom";
 
 export default class Studies extends Component {
   
   studies = null;
-  students = null;
+  students = [];
+  current = null;
 
   async mounted() {
     try {
-      this.studies = await StudyProgramService.getStudies()
+      this.studies = await StudyProgramService.getStudies();
     } catch (e) {
       console.log(e);
     }
@@ -20,6 +22,7 @@ export default class Studies extends Component {
   async showStudents(study) {
     try {
       this.students = await StudyProgramService.getStudents(study);
+      this.current = study;
     } catch (e) {
       console.log(e);
     }
@@ -32,7 +35,7 @@ export default class Studies extends Component {
           <h1 className="font-semibold text-lg pb-4">
             Studieprogram:
           </h1>
-          <div>
+          <div className="space-y-2">
             {
               this.studies?.map((item, index) => {
                 return <StudyInfo 
@@ -50,7 +53,20 @@ export default class Studies extends Component {
           </h1>
           <div>
             {
-              this.students
+              this.current
+              ? <div>
+                  <NavLink
+                    className="px-3 py-1 rounded-md bg-emerald-500 text-white"
+                    to={`/studies/${this.current}`}
+                  >
+                    Detaljer
+                  </NavLink>
+                </div>
+              : <></>
+              
+            }
+            {
+              this.students.length
                 ? (
                     <div>
                       <h1>

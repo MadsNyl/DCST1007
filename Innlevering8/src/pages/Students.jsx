@@ -3,6 +3,7 @@ import React from "react";
 import { pool } from "../../db/main";
 import Student from "../../db/model/student.model";
 import StudentService from "../services/StudentService";
+import { NavLink } from "react-router-dom";
 
 export default class Students extends Component {
 
@@ -23,7 +24,7 @@ export default class Students extends Component {
           <h1 className="font-semibold text-lg pb-4">
             Studenter:
           </h1>
-          <div className="space-y-3">
+          <div className="space-y-2">
             {
               this.students?.map((item, index) => {
                 return <StudentInfo student={item} key={index}/>
@@ -39,7 +40,10 @@ export default class Students extends Component {
 class StudentInfo extends Component {
   render() {
     return (
-      <div className="max-w-sm w-full bg-gray-50 border border-gray-200 flex items-center justify-between px-4 py-1 rounded-md">
+      <NavLink 
+        to={`/students/${this.props.student.id}`}
+        className="max-w-sm w-full bg-gray-50 border border-gray-200 flex items-center justify-between px-4 py-1 rounded-md"
+      >
         <div>
           <h1>
             { this.props.student.name }
@@ -53,7 +57,7 @@ class StudentInfo extends Component {
             { this.props.student.study }
           </p>
         </div>
-      </div>
+      </NavLink>
     );
   }
 }
